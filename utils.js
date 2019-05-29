@@ -1,3 +1,5 @@
+var queryString = require('query-string');
+
 module.exports = {
   /**
    * Generate a cache key unique to this query
@@ -37,7 +39,7 @@ module.exports = {
       return this.stringToObj(req.req.path);
     }
     else if(req && req._query){
-      return this.stringToObj(req._query.join('&'));
+      return queryString.parse(req._query.join('&'));
     }
     return null;
   },

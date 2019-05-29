@@ -34,5 +34,8 @@
     "plugin",
     "browser",
     "node"
-  ]
+  ],
+  "dependencies": {
+    "query-string": "^6.5.0"
+  }
 }
